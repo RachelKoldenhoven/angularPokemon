@@ -9,7 +9,31 @@
     <link href="./css/main.css" rel="stylesheet" media="screen">
 </head>
 <body ng-controller="PokemonController" class="ng-cloak">
-
+<header>
+    <h1>Angular Pokemon</h1>
+</header>
+<main>
+    <div class="container">
+        <!--buttons to choose view-->
+        <div class="row buttons">
+            <div class="one-half column">
+                <h2>Get a random Pokemon</h2>
+                <button ng-click="getNewPokemon()">Generate</button>
+                <loading></loading>
+                <h2>{{ newPokemon.name }}</h2>
+                <figure>
+                    <img ng-src="{{ newPokemon.sprites.front_default }}">
+                </figure>
+            </div>
+            <div class="one-half column">
+                <h2>Get a random move</h2>
+                <button ng-click="getNewMove()">Generate</button>
+                <loading></loading>
+                <h2>{{ newMove.name }}</h2>
+            </div>
+        </div>
+    </div>
+</main>
 
 
 
